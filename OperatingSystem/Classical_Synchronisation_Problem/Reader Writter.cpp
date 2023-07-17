@@ -25,7 +25,7 @@ do{
 
     wait(mutex);
 
-    readCnt++;
+    readCnt++;  
 
     if(readCnt==1)wait(wrt);
 

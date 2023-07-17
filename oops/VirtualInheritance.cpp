@@ -1,3 +1,7 @@
+//Solving Diamond Problem
+//   A
+//B     C
+//   D
 #include<iostream>
 using namespace std;
 

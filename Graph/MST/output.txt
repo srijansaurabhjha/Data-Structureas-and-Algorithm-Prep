@@ -1,0 +1,7 @@
+Union By Rank
+2 7  Does not belong to same component
+7 7  Belong to same component
+
+Union By size
+1 4  Does not belong to same component
+4 4  Belong to same component

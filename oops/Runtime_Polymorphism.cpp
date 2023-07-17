@@ -1,28 +1,57 @@
+//Function Overriding
 #include<iostream>
 using namespace std;
 
-class Employee{
+class Vehicle{
     public:
-    virtual void designation(){
-        cout<<"NOT Defined"<<endl;
+    void print(){
+        cout<<"NA"<<endl;
+    }
+
+    virtual void show(){
+        cout<<"This is a vehicle"<<endl;
     }
 };
 
-class HR:public Employee{
+class Car:public Vehicle{
     public:
-    void designation(){
-        cout<<"HR"<<endl;
+    //method overriding
+    void print(){
+       cout<<"Car"<<endl;
+    }  
+
+    void show(){
+        cout<<"This is a Car"<<endl;
     }
 };
 
 int main(){
-//   Employee e1;
-//   HR h;
-//   e1=h;
-//   e1.designation();
+    Car c;
+    // c.print();
+    // c.Vehicle::print();
+
+    // cout<<endl;
+
+    //Base Class Pointer can point to derived class object
+    // Vehicle *v;
+    // Car c2;
+    // v=&c2;
+    Vehicle* v=new Car;
+
+
+    //Non-virtual function , binded at compile time
+    v->print();   // calls Vehicle class print
+
     
-    // Employee *e2=new HR;
-    // e2->designation();
+    //Virtual function, binded at runtime (Runtime Polymorphism)
+    v->show();  //calls Car class show
+
+    // v->Car::print ->gives error
+
 
 return 0;
 }
+
+//vehicle
+//  |
+// Car

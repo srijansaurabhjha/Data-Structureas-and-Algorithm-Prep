@@ -50,7 +50,7 @@ public:
     }
 
 
-    //2.Post Increment Operator
+    //2.Post Increment Operator->nesting is not allowed
     Point operator++(int){
         x=x+1;
         y=y+1;
@@ -70,6 +70,10 @@ int main()
     Point p3(9, 5, 3);
     Point p4(4, 8, 4);
     // cout << Point::getTotalPoints() << endl;
+
+    Point p5=p2+p3;
+
+    p5.display();
 
     // p1.display();
     // p2.display();
