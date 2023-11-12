@@ -4,7 +4,7 @@ using namespace std;
 
 class Vehicle{
     public:
-    void print(){
+    virtual void print(){
         cout<<"NA"<<endl;
     }
 
